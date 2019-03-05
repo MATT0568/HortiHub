@@ -1,5 +1,0 @@
-DROP DATABASE IF EXISTS hortihub_db;
-CREATE DATABASE hortihub_db;
-
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
