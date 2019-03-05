@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-  var Example = sequelize.define("Example", {
+  var hortihub_db = sequelize.define("hortihub_db", {
     text: DataTypes.STRING,
     description: DataTypes.TEXT
   });
-  return Example;
+  return hortihub_db;
 };
