@@ -16,13 +16,13 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1>Star Wars Express</h1>
-      <h3>The greatest resource in the galaxy for Star Wars statistics!</h3>
+      <h1>Plants</h1>
+      <h3>We got plants!</h3>
       <hr>
       <a href="/" class="btn btn-danger btn-lg">
-        <span class="fa fa-eye"></span> Search Characters</a>
+        <span class="fa fa-eye"></span> Search Plants</a>
       <a href="/all" class="btn btn-danger btn-lg">
-        <span class="fa fa-th-list"></span> All Characters</a>
+        <span class="fa fa-th-list"></span> All Plants</a>
     </div>
     <div class="row">
 
@@ -30,36 +30,27 @@
 
         <div class="card">
           <div class="card-header">
-            Add Characters
+            Add Plants
           </div>
           <div class="card-body">
-            <form action="" method="POST" role="form">
-
-              <div class="form-group">
-                <label for="">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="">
+            <form method="post" class="form-row">
+              <div class="col-md-6">
+                  <label for="plant" class="label">Plant:</label>
+                  <input type="text" class="form-control" list="add-plant" id="plant"
+                      autocomplete="off">
               </div>
-
-              <div class="form-group">
-                <label for="">Role</label>
-                <input type="text" class="form-control" id="role" placeholder="">
+              <div class="col-md-1">
+                  <label class="label" for="submit-plant">&nbsp;</label>
+                  <button name="submit-plant" type="submit" id="submit-plant" class="btn btn-success mb-2">Search
+                      Plant</button>
               </div>
-
-              <div class="form-group">
-                <label for="">Age</label>
-                <input type="text" class="form-control" id="age" placeholder="">
-              </div>
-
-              <div class="form-group">
-                <label for="">Force Points</label>
-                <input type="text" class="form-control" id="force-points" placeholder="">
-              </div>
-
-            </form>
+              <datalist id="add-plant">
+              </datalist>
+          </form>
             <br>
             <div class="text-right">
               <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-                <span class="fa fa-fire"></span> Add to the Force</button>
+                <span class="fa fa-fire"></span> Add Plant</button>
             </div>
           </div>
         </div>

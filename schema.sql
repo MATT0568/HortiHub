@@ -1,20 +1,20 @@
-create database hortihub_db;
+#plantcreate database hortihub_db;
 
-SET GLOBAL log_bin_trust_function_creators = 1;
+#SET GLOBAL log_bin_trust_function_creators = 1;
 
 use hortihub_db;
 
 -- ----------------------------------------------------------------------------
 -- Table hortihub_db.APP_USER
 -- ----------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hortihub_db`.`APP_USER` (
-  `USER_ID` INT(11) NOT NULL AUTO_INCREMENT,
-  `EMAIL` VARCHAR(30) CHARACTER SET 'utf8' NOT NULL,
-  `PASSWORD` VARCHAR(40) CHARACTER SET 'utf8' NOT NULL,
-  `FIRST_NAME` VARCHAR(20) CHARACTER SET 'utf8' NOT NULL,
-  `LAST_NAME` VARCHAR(20) CHARACTER SET 'utf8' NOT NULL,
-  PRIMARY KEY (`USER_ID`),
-  UNIQUE INDEX `APP_USER_UK` (`EMAIL` ASC));
+#CREATE TABLE IF NOT EXISTS `hortihub_db`.`APP_USER` (
+  #`USER_ID` INT(11) NOT NULL AUTO_INCREMENT,
+  #`EMAIL` VARCHAR(30) CHARACTER SET 'utf8' NOT NULL,
+  #`PASSWORD` VARCHAR(40) CHARACTER SET 'utf8' NOT NULL,
+  #`FIRST_NAME` VARCHAR(20) CHARACTER SET 'utf8' NOT NULL,
+  #`LAST_NAME` VARCHAR(20) CHARACTER SET 'utf8' NOT NULL,
+  #PRIMARY KEY (`USER_ID`),
+  #UNIQUE INDEX `APP_USER_UK` (`EMAIL` ASC));
   
   
   -- ----------------------------------------------------------------------------
