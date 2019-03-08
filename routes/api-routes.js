@@ -61,9 +61,9 @@ module.exports = function (app) {
     var info = req.params.info;
     var infoArr = info.split(",");
     sequelize
-  .query('CALL valid_user (:email, :password)', 
-        {replacements: { email: infoArr[0], pwd: infoArr[1], }})
-  .then(v=>console.log(v));
+    .query('EXEC getData :@param1', { replacements: { email: infoArr[0], password: infoArr[1]}, type:sequelize.QueryTypes.SELECT })
+    .then(data => /*Do something with the data*/)
+    .catch(error => /*Do something with the error*/)
   });
 
   app.post("/api/new", function (req, res) {
@@ -77,4 +77,12 @@ module.exports = function (app) {
 
     res.status(204).end();
   });
+};
+
+function requireLogin (req, res, next) {
+  if (!req.user) {
+    res.redirect('/');
+  } else {
+    next();
+  }
 };
