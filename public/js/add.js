@@ -16,7 +16,7 @@ $("#plant").on("keyup", function () {
       url_plant = plant.replace(/%/g, "%25");
     }
 
-    req = $.getJSON('./axios/' + url_plant, function (data) {
+    req = $.getJSON('./plants/' + url_plant, function (data) {
       console.log("hello");
       $.each(data, function (key, entry) {
         dropdown.append($('<option></option>').attr('value', entry.common_name).attr('data-index-number', key));
