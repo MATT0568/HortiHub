@@ -123,3 +123,11 @@ module.exports = function (app) {
     res.status(204).end();
   });
 };
+
+function requireLogin (req, res, next) {
+  if (!req.user) {
+    res.redirect('/');
+  } else {
+    next();
+  }
+};
