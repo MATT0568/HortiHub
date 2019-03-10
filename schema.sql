@@ -1,4 +1,4 @@
-create database hortihub_db;
+#create database hortihub_db;
 
 SET GLOBAL log_bin_trust_function_creators = 1;
 

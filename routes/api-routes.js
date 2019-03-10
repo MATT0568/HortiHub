@@ -1,6 +1,7 @@
 var Plant = require("../models/plant.js");
 var User = require("../models/user.js");
 var axios = require("axios");
+var sequelize = require("../config/connection.js");
 
 module.exports = function (app) {
   app.get("/api/:plants", function (req, res) {
@@ -98,17 +99,26 @@ module.exports = function (app) {
     }
   });
 
-  app.get("/validate/:info", function (req, res) {
+  app.post("/validate/:info", function (req, res) {
     var info = req.params.info;
     var infoArr = info.split(",");
     sequelize
-      .query('CALL valid_user (:email, :password)', {
+      .query('SELECT valid_user (:email, :password)', {
         replacements: {
           email: infoArr[0],
-          pwd: infoArr[1],
+          password: infoArr[1],
         }
       })
-      .then(v => console.log(v));
+      .then(function (result) {
+        var str = JSON.stringify(result[0][0]);
+        var isValid = str[str.length - 3]
+        if (!isValid) {
+          //res.render('/', { error: 'Invalid email or password.' });
+        } else {
+          req.session.user = infoArr[0];
+          res.json(true);
+        }
+      });
   });
 
   app.post("/api/new", function (req, res) {
@@ -122,9 +132,14 @@ module.exports = function (app) {
 
     res.status(204).end();
   });
+
+  app.get('/logout', function(req, res) {
+    req.session.reset();
+    res.redirect('/');
+  });
 };
 
-function requireLogin (req, res, next) {
+function requireLogin(req, res, next) {
   if (!req.user) {
     res.redirect('/');
   } else {
