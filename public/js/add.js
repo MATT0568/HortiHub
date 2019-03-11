@@ -1,5 +1,6 @@
 var req = null;
 var plant_url = "";
+var plantData = {};
 $("#plant").on("keyup", function () {
   var plant = $("#plant").val().trim();
   if (plant.length > 2) {
@@ -17,7 +18,6 @@ $("#plant").on("keyup", function () {
     }
 
     req = $.getJSON('./plants/' + url_plant, function (data) {
-      console.log("hello");
       $.each(data, function (key, entry) {
         dropdown.append($('<option></option>').attr('value', entry.common_name).attr('data-index-number', key));
       })
@@ -25,27 +25,34 @@ $("#plant").on("keyup", function () {
   }
 });
 
-// when user clicks add-btn
-$("#add-btn").on("click", function (event) {
+$("#submit-plant").on("click", function (event) {
   event.preventDefault();
+  var plant = $("#plant").val().trim();
+  req = $.getJSON('./plant/' + plant, function (data) {
+    plantData = data;
+    $("#plant-details").append(`<br />
+      <img src="${data.images[0].url}" alt="plant-img" style="width: 200px; height: 200px"><br />
+      Common Name: ${data.common_name}<br />
+      Scientific Name: ${data.scientific_name}<br />
+      Duration: ${data.duration}<br />
+      Growth Rate: ${data.main_species.specifications.growth_rate}<br />
+      Growth Period: ${data.main_species.specifications.growth_period}<br />
+      Flower Color: ${data.main_species.flower.color}<br />
+      Minimum Ph: ${data.main_species.growth.ph_minimum}<br />
+      Maximum Ph: ${data.main_species.growth.ph_maximum}<br />
+      Shade Tolerance: ${data.main_species.growth.shade_tolerance}<br />
+      Drought Tolerance: ${data.main_species.growth.drought_tolerance}<br />
+      Bloom Period: ${data.main_species.seed.bloom_period}<br />
+      Temperature Minimum: ${data.main_species.growth.temperature_minimum.deg_f} Fahrenheit<br />
+      Commercial Availability: ${data.main_species.seed.commercial_availability}<br />
+    `);
+  });
+});
 
-  // make a newCharacter obj
-  var newPlant = {
-    // name from name input
-    name: $("#name").val().trim()
-  };
-
-  // send an AJAX POST-request with jQuery
-  $.post("/api/new", newPlant)
-    // on success, run this callback
+$("#add-btn").on("click", function (event) {
+  $.post("/api/new", plantData)
     .then(function (data) {
-      // log the data we found
-      console.log(data);
-      // tell the user we're adding a character with an alert window
       alert("Adding plant...");
     });
-
-  // empty each input box by replacing the value with an empty string
   $("#name").val("");
-
 });

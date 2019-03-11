@@ -7,5 +7,8 @@ $("#submit").on("click", function () {
             console.log("true");
             window.location = "/all";
         }
+        else {
+            $("#error").html("&nbsp;&nbsp;&nbsp;Incorrect email or password");
+        }
     });
 });

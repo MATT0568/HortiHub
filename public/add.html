@@ -33,28 +33,35 @@
             Add Plants
           </div>
           <div class="card-body">
-            <form method="post" class="form-row">
+            <form class="form-row">
               <div class="col-md-6">
-                  <label for="plant" class="label">Plant:</label>
-                  <input type="text" class="form-control" list="add-plant" id="plant"
-                      autocomplete="off">
+                <label for="plant" class="label">Plant:</label>
+                <input type="text" class="form-control" list="add-plant" id="plant" autocomplete="off">
               </div>
               <div class="col-md-1">
-                  <label class="label" for="submit-plant">&nbsp;</label>
-                  <button name="submit-plant" type="submit" id="submit-plant" class="btn btn-success mb-2">Search
-                      Plant</button>
+                <label class="label" for="submit-plant">&nbsp;</label>
+                <button name="submit-plant" type="button" id="submit-plant" class="btn btn-success mb-2">Search
+                  Plant</button>
               </div>
               <datalist id="add-plant">
               </datalist>
-          </form>
+            </form>
             <br>
             <div class="text-right">
               <button type="submit" class="btn btn-primary btn-md" id="add-btn">
                 <span class="fa fa-fire"></span> Add Plant</button>
             </div>
+
           </div>
         </div>
-
+        <br>
+        <div class="card">
+          <div class="card-header">
+            View Plants
+          </div>
+          <div class="card-body" id="plant-details">
+          </div>
+        </div>
       </div>
     </div>
   </div>
