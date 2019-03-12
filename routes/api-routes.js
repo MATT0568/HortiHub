@@ -1,24 +1,24 @@
-var Plant = require("../models/plant.js");
-var User = require("../models/user.js");
 var axios = require("axios");
 var sequelize = require("../config/connection.js");
 var db = require("../models");
 
 module.exports = function (app) {
-  app.get("/api/:plants", function (req, res) {
-    if (req.params.plants) {
-      Plant.findOne({
+  app.get("/db", function (req, res) {
+    var userId;
+    db.app_user.findOne({
+      where: {
+        email: req.cookies.userId
+      }
+    }).then(function (result) {
+      userId = result.dataValues.user_id;
+      db.plant.findAll({
         where: {
-          routeName: req.params.plants
+          appUserUserId: userId
         }
       }).then(function (result) {
         return res.json(result);
       });
-    } else {
-      Plant.findAll().then(function (result) {
-        return res.json(result);
-      });
-    }
+    });
   });
 
   app.get("/plant/:plant", function (req, res) {
@@ -101,29 +101,54 @@ module.exports = function (app) {
     }
   });
 
-  app.post("/validate/:info", function (req, res) {
-    var info = req.params.info;
-    var infoArr = info.split(",");
+  app.post("/validate", function (req, res) {
+    var info = req.body;
     sequelize
       .query('SELECT valid_user (:email, :password)', {
         replacements: {
-          email: infoArr[0],
-          password: infoArr[1],
+          email: info.email,
+          password: info.password,
         }
       })
       .then(function (result) {
-        var user = {
-          email: infoArr[0],
-          password: infoArr[1]
-        };
         var str = JSON.stringify(result[0][0]);
         var isValid = parseInt(str[str.length - 3]);
         if (!isValid) {
           req.session.reset();
           res.json(false);
         } else {
-          //res.session.user = user;
-          res.cookie('userId', infoArr[0], { maxAge: 900000, httpOnly: true });
+          res.session.user = info.email;
+          console.log("hello");
+          res.cookie('userId', info.email, { maxAge: 900000, httpOnly: true });
+          res.json(true);
+        }
+      });
+  });
+
+  app.post("/add/user", function (req, res) {
+    var info = req.body;
+    sequelize
+      .query('CALL add_user (:email, :password, :first_name, :last_name)', {
+        replacements: {
+          email: info.email,
+          password: info.password,
+          first_name: info.first_name,
+          last_name: info.last_name
+        }
+      });
+    sequelize
+      .query('SELECT valid_user (:email, :password)', {
+        replacements: {
+          email: info.email,
+          password: info.password,
+        }
+      })
+      .then(function (result) {
+        var str = JSON.stringify(result[0][0]);
+        var isValid = parseInt(str[str.length - 3]);
+        if (!isValid) {
+          res.json(false);
+        } else {
           res.json(true);
         }
       });
@@ -139,8 +164,10 @@ module.exports = function (app) {
     }).then(function (result) {
       userId = result.dataValues.user_id;
       db.plant.create({
+        waterTime: plant.waterTime,
         commonName: plant.common_name,
         scientificName: plant.scientific_name,
+        imgURL: plant.images[0].url,
         duration: plant.duration,
         growthRate: plant.main_species.specifications.growth_rate,
         growthPeriod: plant.main_species.specifications.growth_period,

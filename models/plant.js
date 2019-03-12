@@ -1,7 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
     var Plant = sequelize.define("plant", {
+        waterTime: {
+         type: DataTypes.STRING(20),
+         notNull: true
+        },
         commonName: DataTypes.STRING,
         scientificName: DataTypes.STRING,
+        imgURL: DataTypes.STRING,
         duration: DataTypes.STRING,
         growthRate: DataTypes.STRING,
         growthPeriod: DataTypes.STRING,

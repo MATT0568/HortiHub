@@ -27,14 +27,16 @@ $("#plant").on("keyup", function () {
 
 $("#submit-plant").on("click", function (event) {
   event.preventDefault();
+  $("#plant-details").empty();
   var plant = $("#plant").val().trim();
   req = $.getJSON('./plant/' + plant, function (data) {
     plantData = data;
+    plantData["waterTime"] = $("#water-plant").val().trim();
     $("#plant-details").append(`<br />
       <img src="${data.images[0].url}" alt="plant-img" style="width: 200px; height: 200px"><br />
       Common Name: ${data.common_name}<br />
       Scientific Name: ${data.scientific_name}<br />
-      Duration: ${data.duration}<br />
+      Life Duration: ${data.duration}<br />
       Growth Rate: ${data.main_species.specifications.growth_rate}<br />
       Growth Period: ${data.main_species.specifications.growth_period}<br />
       Flower Color: ${data.main_species.flower.color}<br />
@@ -43,13 +45,14 @@ $("#submit-plant").on("click", function (event) {
       Shade Tolerance: ${data.main_species.growth.shade_tolerance}<br />
       Drought Tolerance: ${data.main_species.growth.drought_tolerance}<br />
       Bloom Period: ${data.main_species.seed.bloom_period}<br />
-      Temperature Minimum: ${data.main_species.growth.temperature_minimum.deg_f} Fahrenheit<br />
+      Temperature Minimum: ${data.main_species.growth.temperature_minimum.deg_f} Degrees Fahrenheit<br />
       Commercial Availability: ${data.main_species.seed.commercial_availability}<br />
     `);
   });
 });
 
 $("#add-btn").on("click", function (event) {
+  console.log(plantData);
   $.post("/api/new", plantData)
     .then(function (data) {
       alert("Adding plant...");
