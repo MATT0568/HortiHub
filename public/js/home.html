@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Tue Mar 12 2019 21:23:41 GMT+0000 (UTC)  -->
-<html data-wf-page="5c7f2a49f995687c731a150e" data-wf-site="5c1c004f6f08bd0f30d09102">
+<html data-wf-page="5c7f15859950859a9f8cd277" data-wf-site="5c1c004f6f08bd0f30d09102">
 <head>
   <meta charset="utf-8">
-  <title>Login</title>
-  <meta content="Login" property="og:title">
+  <title>Home</title>
+  <meta content="Home" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -21,16 +21,13 @@
 <body class="body">
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
     <div class="container-2 w-container"><a href="http://https-www.youtube.com-watch-v-dQw4w9WgXcQ" class="brand w-nav-brand"></a>
-      <nav role="navigation" class="nav-menu w-nav-menu"><a href="#" class="userplantslink w-nav-link">Sign up</a></nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
-      </div>
-    </div>
+      </div><a href="#" class="signoutlink w-nav-link">Sign out</a><a href="#" class="userplantslink w-nav-link">My Plants</a></div>
   </div>
-  <div class="loginbox w-container">
-    <div class="userinfo w-form">
-      <h2 class="heading-2">Sign In</h2>
-      <form id="email-form" name="email-form" data-name="Email Form"><label for="username" class="field-label-5">Username</label><input type="text" class="formstyle w-input" maxlength="256" name="username" data-name="username" placeholder="thecolonizer22" id="username"><label class="field-label-6">Password</label><input type="text" class="formstyle w-input" maxlength="256" name="field-2" data-name="Field 2" placeholder="Keep it a secret" id="field-2" required=""><input type="submit" value="Login" data-wait="Please wait..." class="signupbutton w-button"></form>
+  <div class="plantsearchbar w-container">
+    <div class="search w-form">
+      <form id="email-form" name="email-form" data-name="Email Form" class="plantsearch w-clearfix"><input type="text" class="plantsearchform w-input" maxlength="256" name="searchfield" data-name="searchfield" placeholder=" carrot, daisy, venus fly trap, etc." id="searchfield"><input type="submit" value="Search" data-wait="Please wait..." class="searchbutton w-button"></form>
       <div class="w-form-done">
         <div>Thank you! Your submission has been received!</div>
       </div>
@@ -39,8 +36,14 @@
       </div>
     </div>
   </div>
-  <div class="userplantsfixedfooter"></div>
-  <div class="footer">
+  <div class="plantsearchresults">
+    <div class="homeplantinfo w-container"><img src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="" class="plantsearchpic">
+      <div class="plantsearchnames">
+        <h2 class="homeplantname">[plant name]</h2>
+        <h3 class="homesciencename">[plant science name]</h3>
+      </div><a href="#" class="plantsearchlookup w-button">More Info</a></div>
+  </div>
+  <div class="userplantsfixedfooter">
     <h3 class="copyright">© 2019, Hortihub</h3>
   </div>
   <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
