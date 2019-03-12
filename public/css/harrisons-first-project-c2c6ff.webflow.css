@@ -787,7 +787,7 @@ body {
   flex-wrap: nowrap;
 }
 
-.userplantsswitchbox {
+.userplantsuniversalswitchbox {
   height: 25px;
   font-size: 5px;
   line-height: 2px;
@@ -809,6 +809,7 @@ body {
   bottom: 0%;
   width: 100%;
   height: 20px;
+  margin-bottom: 0px;
   float: left;
   clear: right;
 }
@@ -829,6 +830,69 @@ body {
   margin-bottom: 0px;
   float: right;
   color: #76ac69;
+}
+
+.universalcheckboxlabel {
+  width: 90%;
+  margin-bottom: 0px;
+  float: left;
+  clear: none;
+  color: #76ac69;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.checkbox {
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 0px;
+  float: right;
+  clear: none;
+}
+
+.userplantnotification {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.userplantcheckbox {
+  margin-top: 18px;
+  margin-left: 0px;
+  padding-left: 0px;
+  float: right;
+  text-align: left;
+}
+
+.userplantuniversalcheckbox {
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  float: right;
+  text-align: left;
+}
+
+.universalnotificationcheckboxlabel {
+  margin-right: 20px;
+  margin-bottom: 0px;
+  color: #76ac69;
+}
+
+.checkbox-field-2 {
+  margin-bottom: 0px;
+  float: right;
+  text-align: left;
+}
+
+.universalcheckbox {
+  margin-top: 3px;
+  margin-right: 10px;
+  margin-left: 0px;
+  float: right;
+}
+
+.universalcheckboxform {
+  margin-top: 5px;
 }
 
 @media (max-width: 767px) {
