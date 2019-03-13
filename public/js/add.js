@@ -1,8 +1,8 @@
 var req = null;
 var plant_url = "";
 var plantData = {};
-$("#plant").on("keyup", function () {
-  var plant = $("#plant").val().trim();
+$("#searchfield").on("keyup", function () {
+  var plant = $("#searchfield").val().trim();
   if (plant.length > 2) {
     let dropdown = $('#add-plant');
 
@@ -28,30 +28,28 @@ $("#plant").on("keyup", function () {
 $("#submit-plant").on("click", function (event) {
   event.preventDefault();
   $("#plant-details").empty();
-  var plant = $("#plant").val().trim();
+  var plant = $("#searchfield").val().trim();
   req = $.getJSON('./plant/' + plant, function (data) {
     plantData = data;
-    plantData["waterTime"] = $("#water-plant").val().trim();
-    $("#plant-details").append(`<br />
-      <img src="${data.images[0].url}" alt="plant-img" style="width: 200px; height: 200px"><br />
-      Common Name: ${data.common_name}<br />
-      Scientific Name: ${data.scientific_name}<br />
-      Life Duration: ${data.duration}<br />
-      Growth Rate: ${data.main_species.specifications.growth_rate}<br />
-      Growth Period: ${data.main_species.specifications.growth_period}<br />
-      Flower Color: ${data.main_species.flower.color}<br />
-      Minimum Ph: ${data.main_species.growth.ph_minimum}<br />
-      Maximum Ph: ${data.main_species.growth.ph_maximum}<br />
-      Shade Tolerance: ${data.main_species.growth.shade_tolerance}<br />
-      Drought Tolerance: ${data.main_species.growth.drought_tolerance}<br />
-      Bloom Period: ${data.main_species.seed.bloom_period}<br />
-      Temperature Minimum: ${data.main_species.growth.temperature_minimum.deg_f} Degrees Fahrenheit<br />
-      Commercial Availability: ${data.main_species.seed.commercial_availability}<br />
-    `);
+    $("#plant-img").attr("src", data.images[0].url);
+    $("#common-name").html(data.common_name);
+    $("#scientific-name").html(data.scientific_name);
+    $("#duration").append(data.duration);
+    $("#growth-rate").append(data.main_species.specifications.growth_rate);
+    $("#growth-period").append(data.main_species.specifications.growth_period);
+    $("#color").append(data.main_species.flower.color);
+    $("#minph").append(data.main_species.growth.ph_minimum);
+    $("#maxph").append(data.main_species.growth.ph_maximum);
+    $("#shade-tolerance").append(data.main_species.growth.shade_tolerance);
+    $("#drought-tolerance").append(data.main_species.growth.drought_tolerance);
+    $("#bloom-period").append(data.main_species.seed.bloom_period);
+    $("#mintemp").append(data.main_species.growth.temperature_minimum.deg_f + "Degrees Fahrenheit");
+    $("#availability").append(data.main_species.seed.commercial_availability);
   });
 });
 
 $("#add-btn").on("click", function (event) {
+  plantData["waterTime"] = $("#water-plant").val().trim();
   console.log(plantData);
   $.post("/api/new", plantData)
     .then(function (data) {

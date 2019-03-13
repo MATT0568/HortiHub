@@ -114,11 +114,8 @@ module.exports = function (app) {
         var str = JSON.stringify(result[0][0]);
         var isValid = parseInt(str[str.length - 3]);
         if (!isValid) {
-          req.session.reset();
           res.json(false);
         } else {
-          res.session.user = info.email;
-          console.log("hello");
           res.cookie('userId', info.email, { maxAge: 900000, httpOnly: true });
           res.json(true);
         }

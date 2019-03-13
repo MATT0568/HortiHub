@@ -25,7 +25,7 @@
         <div class="w-icon-nav-menu"></div>
       </div><a href="#" class="signoutlink w-nav-link">Sign out</a><a href="#" class="userplantslink w-nav-link">Home</a></div>
   </div>
-  <div class="userplants w-container">
+  <div class="userplants w-container" id="well-section">
     <div class="w-form">
       <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="universalcheckboxform w-clearfix">
         <div class="checkbox-field-2 w-clearfix w-checkbox"><input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" class="universalcheckbox w-checkbox-input"><label for="checkbox-2" class="universalnotificationcheckboxlabel w-form-label">Enable/Disable Notifications for all Plants:</label></div>
@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="plantcarebox w-clearfix">
-      <div id="w-node-9ee3eaa882fa-93096ae1" class="userplantpicbox"><img src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="" class="plantcareimg"><a href="#" class="userplantcarecancel w-button">Stop Caring For</a></div>
+      <div id="w-node-9ee3eaa882fa-93096ae1" class="userplantpicbox"><img id="plant-picture" src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg" alt="" class="plantcareimg"><a href="#" class="userplantcarecancel w-button">Stop Caring For</a></div>
       <div id="w-node-5ba86fce021e-93096ae1" class="userplantinfo w-clearfix">
         <h3 class="userplantnamehead">Plant Name:</h3>
         <h4 class="userplantname">[plant name]</h4>
@@ -50,12 +50,6 @@
           <form id="email-form" name="email-form" data-name="Email Form" class="w-clearfix">
             <div class="userplantcheckbox w-clearfix w-checkbox"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" class="checkbox w-checkbox-input"><label for="checkbox" class="universalcheckboxlabel w-form-label">enable/disable notifications:</label></div>
           </form>
-          <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
         </div>
       </div>
     </div>
@@ -65,6 +59,8 @@
   </div>
   <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+  <script src="js/all.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

@@ -7,7 +7,7 @@ $("#submit").on("click", function () {
     }
     $.post("/validate", info, function (data) {
         if (data) {
-            window.location = "/all";
+            window.location = "/home";
         }
         else {
             $("#error").html("&nbsp;&nbsp;&nbsp;Incorrect email or password");
