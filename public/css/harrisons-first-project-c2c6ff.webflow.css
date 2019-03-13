@@ -463,7 +463,7 @@ body {
 }
 
 .plantinfopicbox {
-  width: 20%;
+  width: 25%;
   float: left;
   clear: left;
 }
@@ -513,7 +513,7 @@ body {
 
 .plantinfosumhead {
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-left: 0px;
   float: left;
   clear: none;
@@ -529,9 +529,32 @@ body {
 }
 
 .plantinfosum {
-  margin: 5px;
-  float: none;
-  clear: left;
+  display: block;
+  width: 40%;
+  margin: 5px 0px 5px 10%;
+  float: left;
+  clear: none;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   text-align: left;
 }
 
@@ -895,6 +918,33 @@ body {
   margin-top: 5px;
 }
 
+.plantinfofields {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  clear: left;
+  color: #76ac69;
+}
+
+.plantinfocareform {
+  width: 100%;
+  margin-bottom: 0px;
+  float: left;
+}
+
+.field-label-7 {
+  color: #76ac69;
+  text-align: right;
+}
+
+.text-field {
+  width: 100%;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  float: left;
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   .userplantinfo {
     width: 30%;
@@ -930,6 +980,127 @@ body {
     clear: none;
     text-decoration: none;
   }
+}
+
+#w-node-eb81da5228dc-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+#w-node-65fa6f4c455e-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+#w-node-f4d290f23f24-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
+}
+
+#w-node-9049ea48980d-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
+}
+
+#w-node-9df4e51be02b-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 3;
+  grid-row-start: 3;
+  -ms-grid-row-span: 1;
+  grid-row-end: 4;
+}
+
+#w-node-cf21280ddd3d-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 3;
+  grid-row-start: 3;
+  -ms-grid-row-span: 1;
+  grid-row-end: 4;
+}
+
+#w-node-e696eb32a01e-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  -ms-grid-row-span: 1;
+  grid-row-end: 5;
+}
+
+#w-node-a83c03d67321-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  -ms-grid-row-span: 1;
+  grid-row-end: 5;
+}
+
+#w-node-17dc4b7f3255-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 5;
+  grid-row-start: 5;
+  -ms-grid-row-span: 1;
+  grid-row-end: 6;
+}
+
+#w-node-3c43b5956e8f-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 5;
+  grid-row-start: 5;
+  -ms-grid-row-span: 1;
+  grid-row-end: 6;
+}
+
+#w-node-f1251248a5d9-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 6;
+  grid-row-start: 6;
+  -ms-grid-row-span: 1;
+  grid-row-end: 7;
 }
 
 #w-node-9ee3eaa882fa-93096ae1 {
