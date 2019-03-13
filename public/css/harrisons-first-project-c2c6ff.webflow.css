@@ -1,0 +1,1134 @@
+body {
+  height: 100%;
+  min-height: 80%;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.heading {
+  display: block;
+  overflow: visible;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 0px;
+  float: none;
+  clear: none;
+  border-radius: 0px;
+  opacity: 1;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+}
+
+.nav-link {
+  font-family: 'Varela Round', sans-serif;
+  text-align: left;
+}
+
+.form {
+  border-radius: 0px;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+.body {
+  height: 15em;
+  min-height: auto;
+  margin-top: 0px;
+  padding-left: 0px;
+  background-color: #787878;
+  font-family: 'Varela Round', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.searchbutton {
+  background-color: #ce1212;
+}
+
+.searchbutton.searchbutton {
+  position: static;
+  left: 0px;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 10%;
+  height: 40px;
+  float: right;
+  clear: none;
+  background-color: #ec3838;
+  color: #eee;
+}
+
+.section {
+  display: inline;
+  text-align: left;
+  -webkit-column-count: auto;
+  column-count: auto;
+}
+
+.div-block {
+  display: inline;
+  text-decoration: none;
+}
+
+.div-block-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.container {
+  margin-top: 0px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  display: block;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.form-2 {
+  display: block;
+}
+
+.form-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.form-block-2 {
+  min-width: 50%;
+}
+
+.form-3 {
+  display: block;
+  overflow: visible;
+  width: 50%;
+}
+
+.form-block-3 {
+  width: 80%;
+}
+
+.div-block-3 {
+  width: 80%;
+}
+
+.form-block-4 {
+  display: inline-block;
+}
+
+.form-block-5 {
+  width: 50%;
+}
+
+.form-4 {
+  display: block;
+}
+
+.copyright {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3em;
+  min-height: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #333;
+  color: #eee;
+}
+
+.userinfo {
+  width: 80%;
+  margin-bottom: 40px;
+  color: #ededed;
+}
+
+.loginbox {
+  position: static;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5%;
+  clear: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #454545;
+  text-align: left;
+}
+
+.section-2 {
+  position: relative;
+  left: 0%;
+  top: 1%;
+  right: 0%;
+  bottom: 10%;
+  z-index: auto;
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  max-height: none;
+  min-height: auto;
+  float: none;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-areas: ".";
+  -ms-grid-columns: 2.25fr;
+  grid-template-columns: 2.25fr;
+  -ms-grid-rows: auto 16px auto;
+  grid-template-rows: auto auto;
+  border: 1px none #000;
+  border-radius: 0px;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.container-2 {
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.nav-menu {
+  float: right;
+}
+
+.userplantsfixedfooter {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  z-index: auto;
+  height: auto;
+  margin-top: 0px;
+  float: none;
+  background-color: #444;
+  text-align: center;
+}
+
+.signupbutton {
+  margin-top: 20px;
+  background-color: #ec3636;
+}
+
+.heading-2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #75ac68;
+}
+
+.navbar {
+  background-color: #333;
+}
+
+.userplantslink {
+  margin-left: 0px;
+  float: left;
+  color: #76ac69;
+}
+
+.brand {
+  margin-right: 20px;
+  color: #666;
+}
+
+.search {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.submit-button-3 {
+  text-align: right;
+}
+
+.plantsearchform {
+  position: relative;
+  width: 90%;
+  height: 40px;
+  margin-bottom: 0px;
+  float: left;
+  clear: none;
+}
+
+.homeplantinfo {
+  position: static;
+  min-height: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  clear: none;
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
+  background-color: #333;
+}
+
+.image {
+  float: left;
+  text-align: left;
+}
+
+.plantsearchpic {
+  width: 12%;
+  height: 100%;
+  /* max-height: 100%;
+  max-width: none; */
+  float: left;
+  font-size: 0%;
+  line-height: 100%;
+  text-align: left;
+}
+
+.homeplantname {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  float: none;
+  color: #76ac69;
+  font-size: 25px;
+  text-align: left;
+}
+
+.homesciencename {
+  position: static;
+  left: 0px;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  display: block;
+  width: 80%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  float: none;
+  clear: right;
+  color: #76ac69;
+  font-size: 22px;
+  text-align: left;
+}
+
+.button {
+  position: relative;
+  overflow: visible;
+  width: 20%;
+  height: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  float: right;
+  clear: none;
+}
+
+.homelookup {
+  display: block;
+  overflow: visible;
+  height: 0%;
+  margin-top: 0px;
+  padding: 5% 2% 0px;
+  float: right;
+  clear: none;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  background-color: #cf1313;
+  font-size: 100%;
+  line-height: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.image-2 {
+  float: left;
+  text-align: center;
+}
+
+.plantinfobox {
+  margin-top: 20px;
+  background-color: #333;
+}
+
+.plantinfoimg {
+  width: 100%;
+  float: none;
+  clear: none;
+  text-align: center;
+  text-shadow: 1px 1px 6px #000;
+}
+
+.schedulebutton {
+  width: 100%;
+  float: left;
+  clear: left;
+  background-color: #ec3838;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.plantinfoname {
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+  clear: none;
+  color: #76ac69;
+}
+
+.plantinfosciencename {
+  position: static;
+  z-index: auto;
+  display: block;
+  margin: 10px 0px 5px 10px;
+  float: left;
+  clear: left;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  color: #76ac69;
+  text-decoration: none;
+}
+
+.plantinfopicbox {
+  width: 25%;
+  float: left;
+  clear: left;
+}
+
+.paragraph {
+  float: left;
+  clear: both;
+}
+
+.plantinfoparagraph {
+  position: static;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  clear: left;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: #eee;
+  text-align: left;
+}
+
+.plantinfosumparagraph {
+  margin: 5px 10px 0px;
+  float: none;
+  clear: left;
+  color: #76ac69;
+  text-align: left;
+}
+
+.plantinfocare {
+  margin: 5px;
+  clear: left;
+  color: #76ac69;
+  text-align: left;
+}
+
+.plantinfosumhead {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  float: left;
+  clear: none;
+  color: #76ac69;
+}
+
+.plantinfocarehead {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  color: #76ac69;
+  text-align: left;
+}
+
+.plantinfosum {
+  display: block;
+  width: 40%;
+  margin: 5px 0px 5px 10%;
+  float: left;
+  clear: none;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
+  text-align: left;
+}
+
+.section-3 {
+  position: relative;
+  height: 84%;
+  min-height: auto;
+  float: none;
+  clear: none;
+}
+
+.plantcarebox {
+  display: -ms-grid;
+  display: grid;
+  width: 40%;
+  height: 30%;
+  margin: 10px 5%;
+  float: left;
+  clear: none;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 1px;
+  grid-template-areas: ".";
+  -ms-grid-columns: 1fr 0px 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto 1px 1fr;
+  grid-template-rows: auto 1fr;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #ededed;
+  border-radius: 0px;
+  background-color: #666;
+  color: #333;
+}
+
+.userplants {
+  position: static;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  display: block;
+  height: auto;
+  max-height: none;
+  min-height: 100%;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  clear: both;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  background-color: #333;
+  text-align: justify;
+}
+
+.plantcareimg {
+  width: 100%;
+  max-width: none;
+  margin-top: 2px;
+  margin-left: 2px;
+  float: none;
+}
+
+.timetocarehead {
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  float: none;
+  clear: none;
+  color: #76ac69;
+  text-align: left;
+}
+
+.caretime {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: none;
+  clear: none;
+  color: #76ac69;
+  text-align: left;
+}
+
+.userplantnamehead {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: none;
+  clear: none;
+  color: #76ac69;
+  text-align: left;
+}
+
+.userplantcarecancel {
+  width: 100%;
+  margin-bottom: 0px;
+  margin-left: 2px;
+  float: none;
+  clear: none;
+  background-color: #ec3838;
+  color: #eee;
+  text-align: center;
+}
+
+.userplantinfo {
+  position: static;
+  left: auto;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: auto;
+  margin-left: 5px;
+  float: left;
+  clear: none;
+}
+
+.plantsearch {
+  clear: none;
+}
+
+.plantsearchlookup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 12%;
+  height: auto;
+  min-height: 8.1em;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  float: right;
+  clear: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ec3838;
+  color: #eee;
+  line-height: 100%;
+}
+
+.plantsearchnames {
+  width: 70%;
+  margin-left: 5px;
+  float: left;
+  clear: none;
+}
+
+.field-label {
+  margin-top: 5px;
+  color: #76ac69;
+}
+
+.field-label-2 {
+  color: #76ac69;
+}
+
+.field-label-3 {
+  color: #76ac69;
+}
+
+.field-label-4 {
+  color: #76ac69;
+}
+
+.field-label-5 {
+  color: #76ac69;
+}
+
+.field-label-6 {
+  color: #76ac69;
+}
+
+#plant-picture {
+  max-height: 200px;
+  min-height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.userplantpicbox {
+  width: 100%;
+  min-height: 220px;
+}
+
+.userplantname {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #76ac69;
+}
+
+.signoutlink {
+  margin-right: 0px;
+  margin-left: 40px;
+  float: right;
+  color: #76ac69;
+}
+
+.userplantnotifytoggle {
+  clear: left;
+}
+
+.checkbox-label {
+  float: left;
+}
+
+.checkbox-field {
+  float: right;
+}
+
+.userplantlifespanhead {
+  margin-bottom: 0px;
+  color: #76ac69;
+}
+
+.heading-3 {
+  margin-top: 0px;
+  color: #76ac69;
+}
+
+.plantinfonames {
+  float: left;
+}
+
+.plantsearchbar {
+  margin-bottom: 0px;
+}
+
+.grid {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.plantsearchresults {
+  position: relative;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: auto;
+  display: inline-block;
+  width: 75%;
+  height: auto;
+  max-height: 100em;
+  min-height: 100%;
+  margin-bottom: 5%;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.userplantsuniversalswitchbox {
+  height: 25px;
+  font-size: 5px;
+  line-height: 2px;
+}
+
+.section-4 {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+}
+
+.userplantinfoswitchbox {
+  position: static;
+  left: 0%;
+  top: auto;
+  right: auto;
+  bottom: 0%;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 0px;
+  float: left;
+  clear: right;
+}
+
+.userplantnotifyhead {
+  width: 50%;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  float: left;
+  clear: none;
+  color: #76ac69;
+}
+
+.userplantuniversalswitchhead {
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  float: right;
+  color: #76ac69;
+}
+
+.universalcheckboxlabel {
+  width: 90%;
+  margin-bottom: 0px;
+  float: left;
+  clear: none;
+  color: #76ac69;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.checkbox {
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 0px;
+  float: right;
+  clear: none;
+}
+
+.userplantnotification {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.userplantcheckbox {
+  margin-top: 18px;
+  margin-left: 0px;
+  padding-left: 0px;
+  float: right;
+  text-align: left;
+}
+
+.userplantuniversalcheckbox {
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  float: right;
+  text-align: left;
+}
+
+.universalnotificationcheckboxlabel {
+  margin-right: 20px;
+  margin-bottom: 0px;
+  color: #76ac69;
+}
+
+.checkbox-field-2 {
+  margin-bottom: 0px;
+  float: right;
+  text-align: left;
+}
+
+.universalcheckbox {
+  margin-top: 3px;
+  margin-right: 10px;
+  margin-left: 0px;
+  float: right;
+}
+
+.universalcheckboxform {
+  margin-top: 5px;
+}
+
+.plantinfofields {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  clear: left;
+  color: #76ac69;
+}
+
+.plantinfocareform {
+  width: 100%;
+  margin-bottom: 0px;
+  float: left;
+}
+
+.field-label-7 {
+  color: #76ac69;
+  text-align: right;
+}
+
+.text-field {
+  width: 100%;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  float: left;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .userplantinfo {
+    width: 30%;
+    float: left;
+    clear: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .container-2 {
+    float: none;
+  }
+  .userplantslink {
+    margin-left: 0px;
+    float: left;
+  }
+  .homesciencename {
+    float: none;
+    clear: none;
+  }
+  .userplantcarecancel {
+    clear: left;
+  }
+  .userplantinfo {
+    width: 45%;
+    float: left;
+    clear: none;
+  }
+  .signoutlink {
+    margin-right: 10px;
+    margin-left: 20px;
+    float: right;
+    clear: none;
+    text-decoration: none;
+  }
+}
+
+#w-node-eb81da5228dc-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+#w-node-65fa6f4c455e-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+#w-node-f4d290f23f24-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
+}
+
+#w-node-9049ea48980d-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
+}
+
+#w-node-9df4e51be02b-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 3;
+  grid-row-start: 3;
+  -ms-grid-row-span: 1;
+  grid-row-end: 4;
+}
+
+#w-node-cf21280ddd3d-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 3;
+  grid-row-start: 3;
+  -ms-grid-row-span: 1;
+  grid-row-end: 4;
+}
+
+#w-node-e696eb32a01e-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  -ms-grid-row-span: 1;
+  grid-row-end: 5;
+}
+
+#w-node-a83c03d67321-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  -ms-grid-row-span: 1;
+  grid-row-end: 5;
+}
+
+#w-node-17dc4b7f3255-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 5;
+  grid-row-start: 5;
+  -ms-grid-row-span: 1;
+  grid-row-end: 6;
+}
+
+#w-node-3c43b5956e8f-9f8cd277 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 5;
+  grid-row-start: 5;
+  -ms-grid-row-span: 1;
+  grid-row-end: 6;
+}
+
+#w-node-f1251248a5d9-9f8cd277 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 6;
+  grid-row-start: 6;
+  -ms-grid-row-span: 1;
+  grid-row-end: 7;
+}
+
+#w-node-9ee3eaa882fa-93096ae1 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+#w-node-5ba86fce021e-93096ae1 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
