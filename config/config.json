@@ -1,9 +1,9 @@
 {
     "development": {
-      "username": "root",
+      "username": "PoobChute",
       "password": "Puggl3s1",
       "database": "hortihub_db",
-      "host": "127.0.0.1",
+      "host": "aayz1m3bebw8nl.c8izr58rnvfm.us-east-1.rds.amazonaws.com",
       "port": 3306,
       "dialect": "mysql"
     },
