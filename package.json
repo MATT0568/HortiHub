@@ -1,24 +1,23 @@
 {
-  "name": "starwars-express",
+  "name": "HortiHub",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MATT0568/HortiHub.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "client-sessions": "^0.8.0",
-    "cookie-parser": "^1.4.4",
-    "express": "^4.16.3",
-    "mysql2": "^1.6.5",
-    "npm": "^6.4.1",
-    "passport": "^0.4.0",
-    "sequelize": "^4.3.1"
-  }
+  "bugs": {
+    "url": "https://github.com/MATT0568/HortiHub/issues"
+  },
+  "homepage": "https://github.com/MATT0568/HortiHub#readme"
 }
