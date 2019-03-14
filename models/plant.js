@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Plant = sequelize.define("plant", {
+    var Plant = sequelize.define("PLANT", {
         waterTime: {
          type: DataTypes.STRING(20),
          notNull: true
@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
         });
   
     Plant.associate = function(models) {
-      Plant.belongsTo(models.app_user, {
+      Plant.belongsTo(models.APP_USER, {
         foreignKey: {
           allowNull: false
         }

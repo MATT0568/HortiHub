@@ -144,9 +144,9 @@ module.exports = function (app) {
         var str = JSON.stringify(result[0][0]);
         var isValid = parseInt(str[str.length - 3]);
         if (!isValid) {
-          res.json(false);
-        } else {
           res.json(true);
+        } else {
+          res.json(false);
         }
       });
   });

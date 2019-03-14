@@ -1,5 +1,4 @@
 $("#submit").on("click", function() {
-    console.log("HELLO");
     var userData = {
         email: $("#email").val().trim(),
         password: $("#password").val().trim(),
