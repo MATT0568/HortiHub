@@ -53,7 +53,7 @@ $("#add-btn").on("click", function (event) {
   console.log(plantData);
   $.post("/api/new", plantData)
     .then(function (data) {
-      alert("Adding plant...");
+      location.reload(true);
     });
   $("#name").val("");
 });

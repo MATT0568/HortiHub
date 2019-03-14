@@ -11,9 +11,10 @@ $.get("/db", function (data) {
     var nextWater = moment().add(tHoursTillWater, "hours");
     nextWater = moment(nextWater).format("DD/MM/YYYY HH:mm:ss a");
     console.log(nextWater);
+    console.log(data[i]);
     $('#well-section').append(`
     <div class="plantcarebox w-clearfix">
-      <div id="w-node-9ee3eaa882fa-93096ae1" class="userplantpicbox"><img id="plant-picture" src="${data[i].imgURL}" alt="" class="plantcareimg"><a href="#" class="userplantcarecancel w-button">Stop Caring For</a></div>
+      <div id="w-node-9ee3eaa882fa-93096ae1" class="userplantpicbox"><img id="plant-picture" src="${data[i].imgURL}" alt="" class="plantcareimg"><a id="${data[i].APPUSERUserId}" type="submit" class="userplantcarecancel w-button">Stop Caring For</a></div>
       <div id="w-node-5ba86fce021e-93096ae1" class="userplantinfo w-clearfix">
         <h3 class="userplantnamehead">Plant Name:</h3>
         <h4 class="userplantname">${data[i].commonName}</h4>
@@ -29,6 +30,18 @@ $.get("/db", function (data) {
       </div>
     </div>
     `);
+
+    $("#" + data[i].APPUSERUserId).on("click", function () {
+      console.log("hello");
+      var plantId = {
+        id: $(this).attr('id')
+      };
+      console.log(plantId);
+      $.post("/delete/", plantId);
+
+      console.log(plantId)
+      location.reload(true);
+    });
     // $('#well-section').append(`
     // <br />
     //   <img src="${data[i].imgURL}" alt="plant-img" style="width: 200px; height: 200px"><br />

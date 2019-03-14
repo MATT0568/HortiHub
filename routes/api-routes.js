@@ -5,15 +5,15 @@ var db = require("../models");
 module.exports = function (app) {
   app.get("/db", function (req, res) {
     var userId;
-    db.app_user.findOne({
+    db.APP_USER.findOne({
       where: {
         email: req.cookies.userId
       }
     }).then(function (result) {
       userId = result.dataValues.user_id;
-      db.plant.findAll({
+      db.PLANT.findAll({
         where: {
-          appUserUserId: userId
+          APPUSERUserId: userId
         }
       }).then(function (result) {
         return res.json(result);
@@ -143,7 +143,9 @@ module.exports = function (app) {
       .then(function (result) {
         var str = JSON.stringify(result[0][0]);
         var isValid = parseInt(str[str.length - 3]);
-        if (!isValid) {
+        console.log(str);
+        console.log(isValid);
+        if (isValid) {
           res.json(true);
         } else {
           res.json(false);
@@ -154,13 +156,13 @@ module.exports = function (app) {
   app.post("/api/new", function (req, res) {
     var plant = req.body;
     var userId;
-    db.app_user.findOne({
+    db.APP_USER.findOne({
       where: {
         email: req.cookies.userId
       }
     }).then(function (result) {
       userId = result.dataValues.user_id;
-      db.plant.create({
+      db.PLANT.create({
         waterTime: plant.waterTime,
         commonName: plant.common_name,
         scientificName: plant.scientific_name,
@@ -176,11 +178,20 @@ module.exports = function (app) {
         bloomPeriod: plant.main_species.seed.bloom_period,
         minTemp: plant.main_species.growth.temperature_minimum.deg_f,
         commercialAvailability: plant.main_species.seed.commercial_availability,
-        appUserUserId: userId
+        APPUSERUserId: userId
       });
     });
 
     res.status(204).end();
+  });
+
+  app.post("/delete", function (req, res) {
+    var plantId = req.body;
+    db.PLANT.destroy({
+      where: {
+        id: plantId.id
+      }
+    });
   });
 
   app.get('/logout', function (req, res) {
