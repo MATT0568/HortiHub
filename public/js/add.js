@@ -43,7 +43,7 @@ $("#submit-plant").on("click", function (event) {
     $("#shade-tolerance").append(data.main_species.growth.shade_tolerance);
     $("#drought-tolerance").append(data.main_species.growth.drought_tolerance);
     $("#bloom-period").append(data.main_species.seed.bloom_period);
-    $("#mintemp").append(data.main_species.growth.temperature_minimum.deg_f + "Degrees Fahrenheit");
+    $("#mintemp").append(data.main_species.growth.temperature_minimum.deg_f + " Degrees Fahrenheit");
     $("#availability").append(data.main_species.seed.commercial_availability);
   });
 });

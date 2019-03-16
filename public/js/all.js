@@ -11,10 +11,10 @@ $.get("/db", function (data) {
     var nextWater = moment().add(tHoursTillWater, "hours");
     nextWater = moment(nextWater).format("DD/MM/YYYY HH:mm:ss a");
     console.log(nextWater);
-    console.log(data[i]);
+    console.log(data);
     $('#well-section').append(`
     <div class="plantcarebox w-clearfix">
-      <div id="w-node-9ee3eaa882fa-93096ae1" class="userplantpicbox"><img id="plant-picture" src="${data[i].imgURL}" alt="" class="plantcareimg"><a id="${data[i].APPUSERUserId}" type="submit" class="userplantcarecancel w-button">Stop Caring For</a></div>
+      <div id="w-node-9ee3eaa882fa-93096ae1" class="userplantpicbox"><img id="plant-picture" src="${data[i].imgURL}" alt="" class="plantcareimg"><a id="${data[i].id}" type="submit" class="userplantcarecancel w-button">Stop Caring For</a></div>
       <div id="w-node-5ba86fce021e-93096ae1" class="userplantinfo w-clearfix">
         <h3 class="userplantnamehead">Plant Name:</h3>
         <h4 class="userplantname">${data[i].commonName}</h4>
@@ -23,15 +23,15 @@ $.get("/db", function (data) {
         <h4 class="userplantlifespanhead">Life Span:</h4>
         <h5 class="heading-3">${data[i].duration}</h5>
         <div class="userplantinfoswitchbox w-form">
-          <form id="email-form" name="email-form" data-name="Email Form" class="w-clearfix">
-            <div class="userplantcheckbox w-clearfix w-checkbox"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" class="checkbox w-checkbox-input"><label for="checkbox" class="universalcheckboxlabel w-form-label">enable/disable notifications:</label></div>
+          <form id="email-form" name="email-form" data-name="Email Form" class="w-clearfix" style="text-align: center;">
+            <input type="button" onclick="window.location.href='/plantinfo?id=${data[i].id}'" value="More Info" data-wait="Please wait..." class="userplantcheckbox w-button">
           </form>
         </div>
       </div>
     </div>
     `);
 
-    $("#" + data[i].APPUSERUserId).on("click", function () {
+    $("#" + data[i].id).on("click", function () {
       console.log("hello");
       var plantId = {
         id: $(this).attr('id')
@@ -42,6 +42,12 @@ $.get("/db", function (data) {
       console.log(plantId)
       location.reload(true);
     });
+    
+    // $("#" + data[i].APPUSERUserId + "poop").on("click", function () {
+    //   var id = $(this).attr('id').substring(0);
+    //   console.log("hello");
+    //   window.location = "/plantinfo?id=" + id;
+    // });
     // $('#well-section').append(`
     // <br />
     //   <img src="${data[i].imgURL}" alt="plant-img" style="width: 200px; height: 200px"><br />

@@ -21,6 +21,18 @@ module.exports = function (app) {
     });
   });
 
+  app.post("/plantgetinfo", function (req, res) {
+    var plantId = req.body;
+    console.log("--------------" + plantId.id)
+    db.PLANT.findOne({
+      where: {
+        id: plantId.id
+      }
+    }).then(function (result) {
+      return res.json(result);
+    });
+  });
+
   app.get("/plant/:plant", function (req, res) {
     var plant = req.params.plant;
     var url = "https://trefle.io/api/plants?q=" + plant + "&complete_data=true&token=SXRQeVlTdzZrbGYxSms1Y2dQeWZRQT09";
@@ -116,7 +128,7 @@ module.exports = function (app) {
         if (!isValid) {
           res.json(false);
         } else {
-          res.cookie('userId', info.email, { maxAge: 900000, httpOnly: true });
+          res.cookie('userId', info.email, { maxAge: 90000000, httpOnly: true });
           res.json(true);
         }
       });
